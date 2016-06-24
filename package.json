@@ -1,0 +1,25 @@
+{
+  "name": "logic-validator",
+  "version": "1.0.0",
+  "description": "A lightweight, declarative, OOP like node.js module for validating your code entities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itai421/logic-validator.git"
+  },
+  "keywords": [
+    "validate",
+    "validator",
+    "logic",
+    "validation"
+  ],
+  "author": "itai421",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itai421/logic-validator/issues"
+  },
+  "homepage": "https://github.com/itai421/logic-validator#readme"
+}
