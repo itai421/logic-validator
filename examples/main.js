@@ -12,7 +12,7 @@ class Event {
     }
 }
 
-let validEvent = new Event(new Date(0), new Date(666666), 100);
+let validEvent = new Event(new Date(0), new Date(666666), 60);
 
 let invalidEvent = new Event(new Date(), new Date(), 60);
 
