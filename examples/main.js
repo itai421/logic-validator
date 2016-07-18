@@ -4,20 +4,20 @@ let EventValidator = require('./event.validator');
 
 let StartDateIsBeforeEndDate = require('./StartDateIsBeforeEndDate');
 
-let validEvent = {
-    startDate: new Date(0),
-    endDate: new Date(666666)
-};
+class Event {
+    constructor(startDate, endDate, numberOfInvitations) {
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.numberOfInvetations = numberOfInvitations;
+    }
+}
 
-let invalidEvent = {
-    startDate: new Date(),
-    endDate: new Date()
-};
+let validEvent = new Event(new Date(0), new Date(666666), 100);
 
-let valid = new EventValidator(validEvent, validEvent);
-let invalid = new EventValidator(invalidEvent, invalidEvent);
+let invalidEvent = new Event(new Date(), new Date(), 60);
 
-
+let valid = new EventValidator(validEvent);
+let invalid = new EventValidator(invalidEvent);
 
 
 console.log(`valid: ${valid.validate()}`);
