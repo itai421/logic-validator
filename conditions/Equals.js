@@ -1,7 +1,6 @@
 "use strict";
 
-//TODO: use the export and require directly
-let Condition = require('logic-validator').Condition;
+let Condition = require('./../lib/Condition');
 
 //TODO: isn't that to generic?
 class Equals extends Condition {
