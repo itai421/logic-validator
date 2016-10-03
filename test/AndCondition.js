@@ -2,7 +2,6 @@
 
 let should = require('should/as-function');
 let AndCondition = require('../lib/AndCondition');
-let Equals = require('../conditions/Equals');
 
 let TrueCondition = require('./mocks/TrueCondition');
 let trueCondition = new TrueCondition();
@@ -36,5 +35,12 @@ describe('AndCondition', function () {
                 should(condition.validate()).not.be.true();
             });
         });
+        context('when validating array of false conditions', function () {
+            it('should return return false', function () {
+                let condition = new AndCondition([falseCondition, falseCondition]);
+                should(condition.validate()).not.be.true();
+            });
+        });
+
     });
 });
