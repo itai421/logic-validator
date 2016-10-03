@@ -1,10 +1,8 @@
 "use strict";
 
-//TODO: use the export and require directly
 let Condition = require('logic-validator').Condition;
 
-//TODO: isn't that to generic?
-class Equals extends Condition {
+class TrueCondition extends Condition {
 
     constructor(value1, value2){
         super();
@@ -13,8 +11,8 @@ class Equals extends Condition {
     }
 
     validate(){
-        return this.value1 == this.value2;
+        return true;
     }
 }
 
-module.exports = Equals;
+module.exports = TrueCondition;
