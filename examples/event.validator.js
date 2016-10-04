@@ -1,8 +1,7 @@
 "use strict";
 
-//TODO: use the export and require directly
-let Validator = require('../lib/validator');
-let AndCondition = require('../lib/AndCondition');
+let Validator = require('logic-validator').Validator;
+let AndCondition = require('logic-validator').AndCondition;
 let StartDateIsBeforeEndDate = require('./StartDateIsBeforeEndDate');
 let InvitationsNumberIsLessThanMaxInvitationsNumber = require('./InvitationsNumberIsLessThanMaxInvitationsNumber');
 

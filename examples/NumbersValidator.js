@@ -11,12 +11,11 @@
 *
 * */
 
-//TODO: use the export and require directly
-let Validator = require('../lib/validator');
-let AndCondition = require('../lib/AndCondition');
-var LessThan = require('../conditions/LessThan');
-var NotEquals = require('../conditions/NotEquals');
-var Equals = require('../conditions/Equals');
+let Validator = require('logic-validator').Validator;
+let AndCondition = require('logic-validator').AndCondition;
+let LessThan = require('logic-validator/conditions').LessThan;
+let NotEquals = require('logic-validator/conditions').NotEquals;
+let Equals = require('logic-validator/conditions').Equals;
 
 //TODO: add config;
 // let maxInvitationsNumber = config.get('maxInvitationsNumber');
