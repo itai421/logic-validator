@@ -2,7 +2,6 @@
 
 let Condition = require('./../lib/Condition');
 
-//TODO: isn't that to generic?
 class LessThan extends Condition {
 
     constructor(value1, value2){
