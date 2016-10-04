@@ -1,7 +1,6 @@
 "use strict";
 
-//TODO: use the export and require directly 
-let Condition = require('./../lib/Condition');
+let Condition = require('logic-validator').Condition;
 
 class StartDateIsBeforeEndDate extends Condition {
     
