@@ -8,6 +8,7 @@ A lightweight, dependency free, declarative, OOP node.js module for validating y
 
 ## Usages
 Lets say for example that your are writing a program that manage the events of a conference hall.
+
 Events are considered valid if:
 
  * The start date is before the end date.
@@ -21,7 +22,7 @@ Without using *logic-validator* your validation function would probably look som
             return true;
         }
         if (event.numberOfInvetations < 600) {
-            return true
+            return true;
         } 
         return false
     }
