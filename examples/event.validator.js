@@ -5,9 +5,7 @@ let AndCondition = require('logic-validator').AndCondition;
 let StartDateIsBeforeEndDate = require('./StartDateIsBeforeEndDate');
 let InvitationsNumberIsLessThanMaxInvitationsNumber = require('./InvitationsNumberIsLessThanMaxInvitationsNumber');
 
-//TODO: add config;
-// let maxInvitationsNumber = config.get('maxInvitationsNumber');
-let maxInvitationsNumber = 80;
+let maxInvitationsNumber = 600;
 
 class EventValidator extends Validator{
     constructor(event) {
