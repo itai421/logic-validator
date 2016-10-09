@@ -16,10 +16,10 @@ let validEvent = new Event(new Date(0), new Date(666666), 60);
 
 let invalidEvent = new Event(new Date(), new Date(), 60);
 
-let valid = new EventValidator(validEvent);
-let invalid = new EventValidator(invalidEvent);
+let validValidator = new EventValidator(validEvent);
+let invalidValidator = new EventValidator(invalidEvent);
 
 
-console.log(`valid: ${valid.validate()}`);
-console.log(`invalid: ${invalid.validate()}`);
+console.log(`valid: ${validValidator.validate()}`);
+console.log(`invalid: ${invalidValidator.validate()}`);
 

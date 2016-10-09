@@ -48,9 +48,9 @@ The `validate` function is derived from the `Validator` class, so don't worry ab
 ```javascript
     // taken from examples/main.js
 
-    let validator = new EventValidator(validEvent);
+    let validValidator = new EventValidator(validEvent);
     
-    console.log(`valid: ${validator.validate()}`);
+    console.log(`valid: ${validValidator.validate()}`);
 ```
 
 
