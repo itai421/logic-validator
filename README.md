@@ -11,9 +11,9 @@ Lets say for example that your are writing a program that manage the events of a
 Events are considered valid if:
 
  * The start date is before the end date.
- * The invitations number is less than max invitations number (which is 600).
+ * The invitations number is less than max invitations number ( which is 600 ).
 
-without using *logic-validator* your validation function would probably look something like this:  
+Without using *logic-validator* your validation function would probably look something like this: 
 
 ```javascript
     function validate(event) {
@@ -27,7 +27,7 @@ without using *logic-validator* your validation function would probably look som
     }
 ```
 
-using *logic-validator* turn it to something like this: 
+Using *logic-validator* turn it to something like this: 
 ```javascript
     // taken from examples/event.validator.js
     
@@ -42,7 +42,7 @@ using *logic-validator* turn it to something like this:
         }
     }
 ```
-### where is the`validate` function?
+### Where is The `validate` Function?
 The `validate` function is derived from the `Validator` class, so don't worry about it. Calling the validate from the outside looks like this:
 
 ```javascript
@@ -69,18 +69,18 @@ There is also a why to write the example using  **generic conditions**:
     }
 ```
 
-## Requiring the package
-calling `require('logic-validator')` returns an object with the following classes as properties:
+## Requiring The Package
+Calling `require('logic-validator')` returns an object with the following classes as properties:
 
 * Validator.
-* Condition.  
+* Condition. 
 * AndCondition. 
 * OrCondition. 
 
 
-## Creating a complex `Validator`
+## Creating a Complex `Validator`
 You can also create validators with  more complex conditions:
-```javascript   
+```javascript 
     class EventValidator extends Validator{
         constructor(event) {
             super(
@@ -100,8 +100,9 @@ You can also create validators with  more complex conditions:
       
       
 
-## creating costume conditions
-The `StartDateIsBeforeEndDate` and the `InvitationsNumberIsLessThanMaxInvitationsNumber` are a costume conditions. Costume conditions help making the validation process readable and reusable.  
+## Creating Costume Conditions
+The `StartDateIsBeforeEndDate` and the `InvitationsNumberIsLessThanMaxInvitationsNumber` are a costume conditions.
+Costume conditions help making the validation process readable and reusable. 
 In order to create a costume conditions all you need to do is derive from `Condition` class:
 
 ```javascript
@@ -121,10 +122,10 @@ In order to create a costume conditions all you need to do is derive from `Condi
     
     }
 ```
-the `validate` function is where the validation logic is placed. 
+The `validate` function is where the validation logic is placed. 
 
 
-## more information 
+## More Information 
 For more information and for the full code of the examples used in this file, take a look at the `examples/` dir.
  
 
@@ -132,6 +133,6 @@ For more information and for the full code of the examples used in this file, ta
 This package is a desgin propeseal more than an out of the box solution,
 so pleases feel free to fork it, tweak it and twist it.
 
-if you think others can enjoy your contribution please open a PR.
+If you think others can enjoy your contribution please open a PR.
 
-enjoy :)
+Enjoy :)
