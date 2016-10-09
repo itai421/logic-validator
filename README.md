@@ -1,5 +1,5 @@
 # logic-validator
-A lightweight, declarative, OOP like node.js module for validating your code entities
+A lightweight, dependency free, declarative, OOP node.js module for validating your code entities
 
 ## Installation
 ```
@@ -11,7 +11,7 @@ Lets say for example that your are writing a program that manage the events of a
 Events are considered valid if:
 
  * The start date is before the end date.
- * The invitations number is less than max invitations number.
+ * The invitations number is less than max invitations number (which is 600).
 
 without using *logic-validator* your validation function would probably look something like this:  
 
@@ -69,7 +69,7 @@ There is also a why to write the example using  **generic conditions**:
     }
 ```
 
-## what the require returns
+## Requiring the package
 calling `require('logic-validator')` returns an object with the following classes as properties:
 
 * Validator.
@@ -78,8 +78,8 @@ calling `require('logic-validator')` returns an object with the following classe
 * OrCondition. 
 
 
-## Creating complex Validator
-You can also create more complex conditions like this:
+## Creating a complex `Validator`
+You can also create validators with  more complex conditions:
 ```javascript   
     class EventValidator extends Validator{
         constructor(event) {
@@ -124,51 +124,14 @@ In order to create a costume conditions all you need to do is derive from `Condi
 the `validate` function is where the validation logic is placed. 
 
 
+## more information 
+For more information and for the full code of the examples used in this file, take a look at the `examples/` dir.
+ 
 
+## Contributing
+This package is a desgin propeseal more than an out of the box solution,
+so pleases feel free to fork it, tweak it and twist it.
 
-and so to use this package you need to create a costume condition or use a genric one. create a validator and than invke it from the outside
+if you think others can enjoy your contribution please open a PR.
 
-
-all the code in the example dir is code written as a consumer of this package wrote it and can be placed in a differnt source code. 
-
-
-## Documentation
-All the code shown in the documentation can be found in the `examples` dir. 
-
-content:
-
- 1. Using a `Validator`.
- 2. creating a `Validator`.
- 3. creating a `Condition`.
- 4. contributing.
-
-### Using a `Validator`.
-A `Validator` instance expose a `validate` function. This is the function that does the validation itself:
-
-```javascript
-    let EventValidator = require('./event.validator');
-    let validEvent = new Event(new Date(0), new Date(666666), 60);
-    let valid = new EventValidator(validEvent);
-    
-    console.log(`valid: ${valid.validate()}`);
-```
-
-
-## using generic conditions
-
-## what is a Validator
-A `Validator` instance is responsible for validating conditions. The `validate` function of this instance is what usually will be called from outside
-
-## what is a condition
-A `Condition` instance is responsible for a single test case. The validation process involve validating each of the conditions. 
-
-
-
-## how to call the validation class
-
-pleases feel free to fork, and tweak and twist this package. It is more a desgin propeseal than an out of the box solution
-
-
-*******
-This function can easily become much complex 
-*******
+enjoy :)
