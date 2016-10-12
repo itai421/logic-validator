@@ -7,12 +7,12 @@ A lightweight, dependency free, declarative, OOP node.js module for validating y
 ```
 
 ## Usages
-Lets say for example that your are writing a program that manage the events of a conference hall.
+Lets say for example that your are writing a program that manages the events of a conference hall.
 
 Events are considered valid if:
 
  * The start date is before the end date.
- * The invitations number is less than max invitations number ( which is 600 ).
+ * The number of invitations is less than max number invitations ( which is 600 ).
 
 Without using *logic-validator* your validation function would probably look something like this: 
 
@@ -28,7 +28,7 @@ Without using *logic-validator* your validation function would probably look som
     }
 ```
 
-Using *logic-validator* turn it to something like this: 
+Using *logic-validator* turns it to something like this: 
 ```javascript
     // taken from examples/event.validator.js
     
@@ -37,7 +37,7 @@ Using *logic-validator* turn it to something like this:
             super(
                 new AndCondition([
                     new StartDateIsBeforeEndDate(event.startDate, event.endDate),
-                    new InvitationsNumberIsLessThanMaxInvitationsNumber(event.numberOfInvetations, maxInvitationsNumber)
+                    new NumberOfInvitationsIsLessThanMaximum(event.numberOfInvetations, maxInvitationsNumber)
                 ])
             );
         }
@@ -55,8 +55,8 @@ The `validate` function is derived from the `Validator` class, so don't worry ab
 ```
 
 
-The the example above uses **costume conditions** (such as `StartDateIsBeforeEndDate` and `InvitationsNumberIsLessThanMaxInvitationsNumber`).
-There is also a why to write the example using  **generic conditions**:
+The example above uses **costume conditions** (such as `StartDateIsBeforeEndDate` and `InvitationsNumberIsLessThanMaxInvitationsNumber`).
+There is also a way to write the example using  **generic conditions**:
 ```javascript
     class EventValidator extends Validator{
         constructor(event) {
@@ -104,7 +104,7 @@ You can also create validators with  more complex conditions:
 ## Creating Costume Conditions
 The `StartDateIsBeforeEndDate` and the `InvitationsNumberIsLessThanMaxInvitationsNumber` are a costume conditions.
 Costume conditions help making the validation process readable and reusable. 
-In order to create a costume conditions all you need to do is derive from `Condition` class:
+In order to create a costume condition all you need to do is derive from `Condition` class:
 
 ```javascript
     //taken from examples/StartDateIsBeforeEndDate.js
@@ -131,9 +131,9 @@ For more information and for the full code of the examples used in this file, ta
  
 
 ## Contributing
-This package is a desgin propeseal more than an out of the box solution,
-so pleases feel free to fork it, tweak it and twist it.
+This package is a design proposal more than an out of the box solution,
+so please feel free to fork it, tweak it and twist it.
 
-If you think others can enjoy your contribution please open a PR.
+If you think others can enjoy your contribution, please open a PR.
 
 Enjoy :)
