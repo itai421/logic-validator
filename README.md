@@ -55,7 +55,7 @@ The `validate` function is derived from the `Validator` class, so don't worry ab
 ```
 
 
-The example above uses **costume conditions** (such as `StartDateIsBeforeEndDate` and `InvitationsNumberIsLessThanMaxInvitationsNumber`).
+The example above uses **costume conditions** (such as `StartDateIsBeforeEndDate` and `NumberOfInvitationsIsLessThanMaximum`).
 There is also a way to write the example using  **generic conditions**:
 ```javascript
     class EventValidator extends Validator{
@@ -87,7 +87,7 @@ You can also create validators with  more complex conditions:
             super(
                 new AndCondition([
                     new StartDateIsBeforeEndDate(event.startDate, event.endDate),
-                    new InvitationsNumberIsLessThanMaxInvitationsNumber(event.numberOfInvetations, maxNumberOfInvitations),
+                    new NumberOfInvitationsIsLessThanMaximum(event.numberOfInvetations, maxNumberOfInvitations),
                     new OrCondition([
                         new LessThan(event.startDate, event.endDate),
                         new LessThan(event.numberOfInvetations, maxNumberOfInvitations)                        
@@ -102,7 +102,7 @@ You can also create validators with  more complex conditions:
       
 
 ## Creating Costume Conditions
-The `StartDateIsBeforeEndDate` and the `InvitationsNumberIsLessThanMaxInvitationsNumber` are a costume conditions.
+The `StartDateIsBeforeEndDate` and the `NumberOfInvitationsIsLessThanMaximum` are a costume conditions.
 Costume conditions help making the validation process readable and reusable. 
 In order to create a costume condition all you need to do is derive from `Condition` class:
 

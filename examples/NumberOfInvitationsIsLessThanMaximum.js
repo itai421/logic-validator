@@ -2,7 +2,7 @@
 
 let Condition = require('logic-validator').Condition;
 
-class InvitationsNumberIsLessThanMaxInvitationsNumber extends Condition {
+class NumberOfInvitationsIsLessThanMaximum extends Condition {
 
     constructor(invitationsNumber, max){
         super();
@@ -16,5 +16,5 @@ class InvitationsNumberIsLessThanMaxInvitationsNumber extends Condition {
 
 }
 
-module.exports = InvitationsNumberIsLessThanMaxInvitationsNumber;
+module.exports = NumberOfInvitationsIsLessThanMaximum;
 

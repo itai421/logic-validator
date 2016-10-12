@@ -3,7 +3,7 @@
 let Validator = require('logic-validator').Validator;
 let AndCondition = require('logic-validator').AndCondition;
 let StartDateIsBeforeEndDate = require('./StartDateIsBeforeEndDate');
-let InvitationsNumberIsLessThanMaxInvitationsNumber = require('./InvitationsNumberIsLessThanMaxInvitationsNumber');
+let NumberOfInvitationsIsLessThanMaximum = require('./NumberOfInvitationsIsLessThanMaximum');
 
 let maxNumberOfInvitations = 600;
 
@@ -12,7 +12,7 @@ class EventValidator extends Validator{
         super(
             new AndCondition([
                 new StartDateIsBeforeEndDate(event.startDate, event.endDate),
-                new InvitationsNumberIsLessThanMaxInvitationsNumber(event.numberOfInvetations, maxNumberOfInvitations)
+                new NumberOfInvitationsIsLessThanMaximum(event.numberOfInvetations, maxNumberOfInvitations)
             ])
         );
     }
