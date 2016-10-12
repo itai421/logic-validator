@@ -37,7 +37,7 @@ Using *logic-validator* turns it to something like this:
             super(
                 new AndCondition([
                     new StartDateIsBeforeEndDate(event.startDate, event.endDate),
-                    new NumberOfInvitationsIsLessThanMaximum(event.numberOfInvetations, maxInvitationsNumber)
+                    new NumberOfInvitationsIsLessThanMaximum(event.numberOfInvetations, maxNumberOfInvitations)
                 ])
             );
         }
@@ -63,7 +63,7 @@ There is also a way to write the example using  **generic conditions**:
             super(
                 new AndCondition([
                     new LessThan(event.startDate, event.endDate),
-                    new LessThan(event.numberOfInvetations, maxInvitationsNumber)
+                    new LessThan(event.numberOfInvetations, maxNumberOfInvitations)
                 ])
             );
         }
@@ -87,10 +87,10 @@ You can also create validators with  more complex conditions:
             super(
                 new AndCondition([
                     new StartDateIsBeforeEndDate(event.startDate, event.endDate),
-                    new InvitationsNumberIsLessThanMaxInvitationsNumber(event.numberOfInvetations, maxInvitationsNumber),
+                    new InvitationsNumberIsLessThanMaxInvitationsNumber(event.numberOfInvetations, maxNumberOfInvitations),
                     new OrCondition([
                         new LessThan(event.startDate, event.endDate),
-                        new LessThan(event.numberOfInvetations, maxInvitationsNumber)                        
+                        new LessThan(event.numberOfInvetations, maxNumberOfInvitations)                        
                     ])
                 ])
             );

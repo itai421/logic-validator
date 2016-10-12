@@ -6,7 +6,7 @@ let LessThan = require('logic-validator/conditions').LessThan;
 let NotEquals = require('logic-validator/conditions').NotEquals;
 let Equals = require('logic-validator/conditions').Equals;
 
-let maxInvitationsNumber = 80;
+let maxNumberOfInvitations = 80;
 
 class NumbersValidator extends Validator{
     constructor(num1, num2, num3) {

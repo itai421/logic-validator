@@ -7,11 +7,11 @@ class InvitationsNumberIsLessThanMaxInvitationsNumber extends Condition {
     constructor(invitationsNumber, max){
         super();
         this.invitationsNumber = invitationsNumber;
-        this.maxInvitationsNumber = max;
+        this.maxNumberOfInvitations = max;
     }
 
     validate(){
-        return this.invitationsNumber < this.maxInvitationsNumber;
+        return this.invitationsNumber < this.maxNumberOfInvitations;
     }
 
 }
