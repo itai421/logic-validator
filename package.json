@@ -1,7 +1,7 @@
 {
   "name": "logic-validator",
   "version": "1.0.1",
-  "description": "A lightweight, declarative, OOP like node.js module for validating your code entities",
+  "description": "A lightweight, dependency free, declarative, OOP like node.js module for validating your code entities",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
