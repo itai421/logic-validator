@@ -30,7 +30,7 @@ Without using *logic-validator* your validation function would probably look som
 
 Using *logic-validator* turns it to something like this: 
 ```javascript
-    // taken from examples/event.validator.js
+    // taken from examples/1/validators/event.validator.js
     
     class EventValidator extends Validator{
         constructor(event) {
@@ -47,7 +47,7 @@ Using *logic-validator* turns it to something like this:
 The `validate` function is derived from the `Validator` class, so don't worry about it. Calling the validate from the outside looks like this:
 
 ```javascript
-    // taken from examples/main.js
+    // taken from examples/1/main.js
 
     let validValidator = new EventValidator(validEvent);
     
@@ -107,7 +107,7 @@ Costume conditions help making the validation process readable and reusable.
 In order to create a costume condition all you need to do is derive from `Condition` class:
 
 ```javascript
-    //taken from examples/StartDateIsBeforeEndDate.js
+    //taken from examples/1/conditions/StartDateIsBeforeEndDate.js
     
     class StartDateIsBeforeEndDate extends Condition {
         
