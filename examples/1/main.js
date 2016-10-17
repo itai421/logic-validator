@@ -1,8 +1,8 @@
 "use strict";
 
-let EventValidator = require('./event.validator');
+let EventValidator = require('./validators/event.validator.js');
 
-let StartDateIsBeforeEndDate = require('./StartDateIsBeforeEndDate');
+let StartDateIsBeforeEndDate = require('./conditions/StartDateIsBeforeEndDate');
 
 class Event {
     constructor(startDate, endDate, numberOfInvitations) {

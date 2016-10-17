@@ -1,6 +1,6 @@
 "use strict";
 
-let numbersValidator = require('./numbers.validator');
+let numbersValidator = require('./validators/numbers.validator.js');
 
 let validator = new numbersValidator(6, 7, 7);
 
