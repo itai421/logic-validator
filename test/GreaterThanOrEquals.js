@@ -18,7 +18,7 @@ describe('GreaterThanOrEquals', function () {
             });
         });
         context('when the first value is less than the second one', function () {
-            it('should return return fasle', function () {
+            it('should return return false', function () {
                 let condition = new GreaterThanOrEquals(5,6);
                 should(condition.validate()).not.be.true();
             });
